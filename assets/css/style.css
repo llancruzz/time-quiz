@@ -30,6 +30,17 @@ body {
     margin-top: 0;
 }
 
+
+.sec-quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+
 .circle {
     position: relative;
     width: 45vh;
@@ -100,6 +111,16 @@ to {
 }
 
 
+.btn-option {
+    border-style: solid;
+    border-radius: 0px 60px 0px;
+    position: relative;
+    width: 70vh;
+    border-color: #d9d9d9;
+    margin-top: inherit;
+}
+
+
 #mainQuiz {
     display: flex;
     flex-direction: column;
@@ -109,7 +130,7 @@ to {
 }
 
 
-h1, p {
+h1, h2, p {
     margin: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -117,7 +138,7 @@ h1, p {
 }
 
 
-h1 {
+h1, h2 {
     font-weight: bolder;
 }
 
@@ -143,4 +164,29 @@ footer {
 
 .social-media li {
     display: inline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#favTime {
+    font-size: 8rem;
+}
+
+.bar {
+    width: 40vh;
+    height: 20px;
+    border-radius: 0px 60px 0px;;
+    background-color: #d9d9d9;
+    border-style: solid;
+    margin: 3rem;
+}
+
+.bar div {
+    height: 100%;
+    border-radius: 0px 60px 0px;
+    background-color: #232d40;
+    width: 50%;
 }
