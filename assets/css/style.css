@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    background-color: #232d40;
+    color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    min-height: 100%;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+}
+
+
+.sec-circ {
+    margin: 0.5rem;
+    margin-top: 0;
+}
+
+.circle {
+    position: relative;
+    width: 45vh;
+    height: 45vh;
+    background: linear-gradient(#33ccff,#ff0066);
+    border-radius: 50%;
+    animation: animate 0.5s linear infinite;
+
+}
+
+@keyframes animate {
+from {
+    transform:rotate(0deg);
+}
+to {
+    transform: rotate(360deg);
+}
+}
+
+.circle:after {
+    content:'';
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    border-radius: 50%;
+    background-color: #232d40;
+
+}
+.circle  span {
+    position: absolute;
+    background: linear-gradient(#33ccff,#ff0066);
+    border-radius: 50%;
+}
+.circle span:nth-child(1) {
+    filter: blur(5px);
+
+}
+
+.circle span:nth-child(2) {
+    filter: blur(10px);
+}
+
+.circle span:nth-child(3) {
+    filter: blur(20px);
+}
+
+.circle span:nth-child(4) {
+    filter: blur(55px);
+}
+
+
+.btn-theme {
+    float: right;
+    margin: 1rem;
+}
+
+
+.btn-start {
+    border-style: solid;
+    border-radius: 0px 60px 0px;
+    position: relative;
+    width: 5rem;
+    border-color: #d9d9d9;
+    margin-top: inherit;
+
+}
+
+
+#mainQuiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+
+h1, p {
+    margin: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+}
+
+
+h1 {
+    font-weight: bolder;
+}
+
+
+footer {
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    margin-top: auto;
+}
+
+.social-media {
+    text-align: center;
+}
+
+
+.social-media i {
+    font-size: 250%;
+    padding: 4%;
+    color: #d9d9d9;
+}
+
+
+.social-media li {
+    display: inline;
+}
