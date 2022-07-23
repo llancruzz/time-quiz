@@ -86,12 +86,14 @@ to {
 
 .btn-theme {
     float: right;
-    margin: 1rem;
+    position: relative;
+    right: 15px;
+    top: 15px;
 }
 
 
-.btn-theme button {
-    font-size: 40px;
+.btn-theme i {
+    font-size: 35px;
 }
 
 
@@ -151,10 +153,6 @@ footer {
     display: inline;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
 
 #favTime {
     font-size: 8rem;
@@ -194,10 +192,9 @@ section {
 .option-container {
     display: flex;
     margin-bottom: 0.5rem;
-    width: 100%;
+    width: 90%;
     border-radius: 0px 60px 0px;
     background-color: #d9d9d9;
-    min-width: 80rem;
     border-style: solid;
 }
 
@@ -212,6 +209,11 @@ section {
     color: #232d40;
     font-weight: bolder;
     text-align: center;
-    padding-right: 25%;
-    padding-left: 25%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+
+#question {
+    margin-top: 15px;
 }
