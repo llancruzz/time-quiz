@@ -11,30 +11,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+  <!--Light theme and Dark theme-->
    <header>
     <div id="theme-toggler" class="fas fa-moon"></div>
    </header>
 
    <section>
-    
-    <div id="question">
-      <h1><strong>How would you describe your pace of life?</strong></h1>
+    <!--Quiz-->
+    <div id="question-area">
+      <h1 id="questions"><strong>1. </strong></h1>
     </div>
     
     <div class="option-container">
-      <p>A - I'm easy-going. I just take life as it comes.</p>
+      <p class="option" id="A" onclick="checkAnswer('A')">A -</p>
     </div>
     
     <div class="option-container">
-      <p>B - Quite fast, but I leave enough time for relaxation.</p>
+      <p class="option" id="B" onclick="checkAnswer('B')">B -</p>
     </div>
    
     <div class="option-container">
-      <p>C - At times frantic, at times relaxed.</p>
+      <p class="option" id="C" onclick="checkAnswer('C')">C -</p>
     </div>
     
     <div class="option-container">
-      <p>D - Non-stop the whole time, but I like it that way.</p>
+      <p class="option" id="D" onclick="checkAnswer('D')">D -</p>
     </div>
 
     </section>
@@ -46,9 +47,9 @@
      <div id="favTime">
       <i class="far fa-clock"></i>
      </div>
-
+    <!--Progress Bar-->
      <div class="bar">
-      <div></div>
+      <div id="progress-bar"></div>
      </div>
     
    </section>
