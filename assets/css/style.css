@@ -124,6 +124,16 @@ to {
 }
 
 
+.btn-back {
+    border-style: solid;
+    border-radius: 0px 60px 0px;
+    position: relative;
+    width: 5rem;
+    border-color: var(--primary-border-color);
+    margin-top: inherit;
+}
+
+
 #mainQuiz {
     display: flex;
     flex-direction: column;
@@ -197,6 +207,11 @@ footer {
 }
 
 
+#testAgain {
+    margin-top: inherit;
+}
+
+
 section {
     display: flex;
     flex-direction: column;
@@ -208,6 +223,7 @@ section {
 .option-container {
     display: flex;
     margin-bottom: 0.5rem;
+    margin-left: 1rem;
     width: 90%;
     border-radius: 0px 60px 0px;
     background-color: var(--secondary-bg-color);

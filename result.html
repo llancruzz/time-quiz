@@ -18,32 +18,37 @@
 
    <section>
     <!--Quiz-->
-    <div id="question"></div>
-    <div id="countainer">
-      <div class="option-container" id="A" onclick="checkAnswer('A')" onclick="move()"></div>
-      
-      <div class="option-container" id="B" onclick="checkAnswer('B')" onclick="move()"></div>
-    
-      <div class="option-container" id="C" onclick="checkAnswer('C')" onclick="move()"></div>
-      
-      <div class="option-container" id="D" onclick="checkAnswer('D')" onclick="move()"></div>
+    <div id="resultHeader">
+        <h1>Well, you are ...</h1>
+    </div>
+
+    <div id="containerResult">
+        <!-- diplay highest answer -->
+      <div class="option-container" id="highResult"></div>
+      <!-- if all options are equal dislpay below div's -->
+      <div id ="display">
+        <div class="option-container" id="resultA"></div>
+        <div class="option-container" id="resultB"></div>
+        <div class="option-container" id="resultC"></div>
+        <div class="option-container" id="resultD"></div>
+    </div>
+   </div>
+
+   <div id="outerBtn">
+    <a href="index.html">
+     <button class="btn-back" id="testAgain">Test Again</button>
+    </a>
    </div>
 
     </section>
 
     <section>
 
-    <h2>Choose only one option</h2>
-
      <div id="favTime">
       <i class="far fa-clock"></i>
      </div>
-    <!--Progress Bar-->
-     <div class="bar">
-      <div id="progress-bar"></div>
-     </div>
     
-   </section>
+    </section>
    <!--Footer-->
    <footer class="social-media">
      <ul>
@@ -56,7 +61,8 @@
      </ul>
    </footer>
    <!-- font awsome script here -->
-<script src="https://kit.fontawesome.com/b11be1e679.js" crossorigin="anonymous"></script> 
-<script type='text/javascript' src="assets/quiz.js"></script>
+<script src="https://kit.fontawesome.com/b11be1e679.js" crossorigin="anonymous"></script>  
+<script type='text/javascript' src="assets/result.js"></script> 
+
 </body>
 </html>
