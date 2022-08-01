@@ -13,9 +13,9 @@ let countOptionB = 0;
 let countOptionC = 0;
 let countOptionD = 0;
 
+
 // Get all the answer finished
 let runningQuestion = 0;
-
 
 
 // Questions and answers
@@ -26,7 +26,6 @@ const quizQuestions = [
         optionB: "B - Quite fast, but I leave enough time for relaxation.",
         optionC: "C - At times frantic, at times relaxed.",
         optionD: "D - Non-stop the whole time, but I like it that way."
-
     },
     {
         question: "How do you tackle all the things you have to do each day?",
@@ -121,7 +120,7 @@ function getResult() {
     // redirect user to resut page
     window.location="result.html";
 
-}
+};
 
 // Get the question and options A,B,C,D
 function getQuestions() {
@@ -132,7 +131,7 @@ function getQuestions() {
     optionB.innerHTML = "<p class= 'option' id='B'>" + questions.optionB + "</p>";
     optionC.innerHTML = "<p class= 'option' id='C'>" + questions.optionC + "</p>";
     optionD.innerHTML = "<p class= 'option' id='D'>" + questions.optionD + "</p>";
-}
+};
 
 // When the user click on the option
 function checkAnswer(option) {
@@ -155,10 +154,8 @@ function checkAnswer(option) {
         getQuestions();
     } else {
         getResult();
-    }
-  
-   
-}
+    } 
+};
 
 // Light theme and Dark theme 
 let themeToggler = document.getElementById('theme-toggler');

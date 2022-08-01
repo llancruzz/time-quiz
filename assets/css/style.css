@@ -118,10 +118,11 @@ to {
     border-style: solid;
     border-radius: 0px 60px 0px;
     position: relative;
-    width: 5rem;
+    width: 7rem;
     cursor: pointer;
     border-color: var(--primary-border-color);
     margin-top: inherit;
+    font-size: 100%;
 }
 
 
@@ -129,10 +130,11 @@ to {
     border-style: solid;
     border-radius: 0px 60px 0px;
     position: relative;
-    width: 5rem;
+    width: 7rem;
     cursor: pointer;
     border-color: var(--primary-border-color);
     margin-top: inherit;
+    font-size: 100%;
 }
 
 
@@ -150,6 +152,7 @@ h1, h2, p {
     text-transform: uppercase;
     letter-spacing: 5px;
     text-align: center;
+    word-break: break-word;
 
 }
 
@@ -187,7 +190,7 @@ footer {
 }
 
 .bar {
-    width: 40vh;
+    width: 30vh;
     height: 20px;
     border-radius: 0px 60px 0px;;
     background-color: var(--secondary-bg-color);
@@ -221,6 +224,17 @@ section {
     margin-top: auto;
 }
 
+#container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
 .option-container {
     display: flex;
     margin-bottom: 0.5rem;
@@ -241,9 +255,20 @@ section {
 .option-container p {
     color: var(--secondary-text-color);
     font-weight: bolder;
-    text-align: center;
+    text-align: justify;
     padding-right: 5%;
     padding-left: 5%;
+    word-break: break-word;
+}
+
+
+#containerResult {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 
