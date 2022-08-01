@@ -122,7 +122,7 @@ to {
     cursor: pointer;
     border-color: var(--primary-border-color);
     margin-top: inherit;
-    font-size: 100%;
+    font-size: 95%;
 }
 
 
@@ -134,7 +134,7 @@ to {
     cursor: pointer;
     border-color: var(--primary-border-color);
     margin-top: inherit;
-    font-size: 100%;
+    font-size: 95%;
 }
 
 
@@ -152,8 +152,6 @@ h1, h2, p {
     text-transform: uppercase;
     letter-spacing: 5px;
     text-align: center;
-    word-break: break-word;
-
 }
 
 
@@ -224,6 +222,25 @@ section {
     margin-top: auto;
 }
 
+
+.clock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+
+.outer-quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+
 #container {
     display: flex;
     flex-direction: column;
@@ -232,7 +249,6 @@ section {
     align-items: center;
     flex-wrap: wrap;
 }
-
 
 
 .option-container {
@@ -249,7 +265,6 @@ section {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgba(55, 40, 71);
     transform: scale(1.02);
-    transform: transform 100ms;
 }
 
 .option-container p {
@@ -258,7 +273,6 @@ section {
     text-align: justify;
     padding-right: 5%;
     padding-left: 5%;
-    word-break: break-word;
 }
 
 

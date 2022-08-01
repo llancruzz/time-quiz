@@ -1,4 +1,3 @@
-
 //Get result elements
 const resultA = document.getElementById("resultA");
 const resultB = document.getElementById("resultB");
@@ -17,11 +16,13 @@ const results =
 
 // Wait for the DOM to finish loading before running the results
 document.addEventListener("DOMContentLoaded", function() {
+    "use strict";
     showResult();
 });
 
 // Display correct highest or equal result
 function showResult() {
+    "use strict";
     // Check first hight option and second hight option
     const firstHighestOption = localStorage.getItem("firstHighestOption");
     const secondHighestOption = localStorage.getItem("secondHighestOption");
@@ -82,18 +83,18 @@ function showResult() {
 
     }
 
-};
+}
 
 // Light theme and Dark theme 
 let themeToggler = document.getElementById('theme-toggler');
-
-themeToggler.onclick = () => {
+    themeToggler.onclick = () => {
+    "use strict";
     themeToggler.classList.toggle('fa-sun');
 
     if(themeToggler.classList.contains('fa-sun')) {
         document.body.classList.add('active');
     } else {
-        document.body.classList.remove('active')
+        document.body.classList.remove('active');
     }
 };
 

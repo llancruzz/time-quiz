@@ -82,11 +82,13 @@ const quizQuestions = [
 
 // Wait for the DOM to finish loading before running the questions
 document.addEventListener("DOMContentLoaded", function() {
+    "use strict";
     getQuestions();
 });
 
 
 function getResult() {
+    "use strict";
     // Store the options have chosen in a object
     const answeredOptions = { countOptionA, countOptionB, countOptionC, countOptionD };
 
@@ -104,9 +106,7 @@ function getResult() {
      const secondHighestValue = sortedAnswer[secondHighestKey];
 
     // Cheking the condition
-    if (sortedAnswer.countOptionA === sortedAnswer.countOptionB 
-        && sortedAnswer.countOptionB === sortedAnswer.countOptionC 
-        && sortedAnswer.countOptionC === sortedAnswer.countOptionD) {
+    if (sortedAnswer.countOptionA === sortedAnswer.countOptionB && sortedAnswer.countOptionB === sortedAnswer.countOptionC && sortedAnswer.countOptionC === sortedAnswer.countOptionD) {
             localStorage.setItem("isAllOptionsEqual", true);   
     } else if (firstHighestValue === secondHighestValue) {
         localStorage.setItem("isAllOptionsEqual", false);  
@@ -120,21 +120,23 @@ function getResult() {
     // redirect user to resut page
     window.location="result.html";
 
-};
+}
 
 // Get the question and options A,B,C,D
 function getQuestions() {
+    "use strict";
     //runningQuestion start from zero to get the first question
     const questions = quizQuestions[runningQuestion]; 
-    question.innerHTML = "<h1 id='questions'><strong>" + questions.question + "</strong></h1>"
+    question.innerHTML = "<h1 id='questions'><strong>" + questions.question + "</strong></h1>";
     optionA.innerHTML = "<p class= 'option' id='A'>" + questions.optionA + "</p>";
     optionB.innerHTML = "<p class= 'option' id='B'>" + questions.optionB + "</p>";
     optionC.innerHTML = "<p class= 'option' id='C'>" + questions.optionC + "</p>";
     optionD.innerHTML = "<p class= 'option' id='D'>" + questions.optionD + "</p>";
-};
+}
 
 // When the user click on the option
 function checkAnswer(option) {
+    "use strict";
     runningQuestion++; // increment to get the next question
     // calculate the percentage of progress
     const progressPercentage = ((runningQuestion)/8)*100;
@@ -155,18 +157,18 @@ function checkAnswer(option) {
     } else {
         getResult();
     } 
-};
+}
 
 // Light theme and Dark theme 
 let themeToggler = document.getElementById('theme-toggler');
-
-themeToggler.onclick = () => {
+    themeToggler.onclick = () => {
+    "use strict";
     themeToggler.classList.toggle('fa-sun');
 
     if(themeToggler.classList.contains('fa-sun')) {
         document.body.classList.add('active');
     } else {
-        document.body.classList.remove('active')
+        document.body.classList.remove('active');
     }
 };
 
