@@ -1,53 +1,99 @@
 
-    //Get result elements
+//Get result elements
 const resultA = document.getElementById("resultA");
 const resultB = document.getElementById("resultB");
 const resultC = document.getElementById("resultC");
 const resultD = document.getElementById("resultD");
-const resultHeader = document.getElementById("resultHeader");
-const highResult = document.getElementById("highResult");
+
 
 // Results
-const results = [
-   {
-    resultA: "You're a daydreamer. Did you actually manage to finish the quiz? You have a little control over your life. Chaos surrounds you. Perhaps you tell yourself that you are being creative, but the truth is you are frightened of failure, so you don't cry. Your abilities remain untested and your dreams unfulfilled.",
-    resultB: "You represent balance and common sense. Your ability to manage your life is impressive, and you know when to relax. You understand that the best decisions are never made in an atmosphere of pressure. You can meet deadlines and look ahead to make sure crises don't happen.",
-    resultC: "You live in hope that something or somebody will make everything in life come right for you.\"I'll get round to it\", you tell yourself. What you don't tell yourself is that you alone can manage your life. You are an expert in putting things off till later and finding excuses when you do so. Forget these excuses. The right time is now.",
-    resultD: "You are certainly an achiever. Superman or superwoman. You know how to get a job done and you are proud of the way you manage your life. You are obsessive about using every second of the day to your best effect and get irritated by people who are not like you and prefer to take life at a slower pace. Learn to relax a little. Remember, stress kills.",
-   }
-]
+const results = {
+    A: "You're a daydreamer. Did you actually manage to finish the quiz? You have a little control over your life. Chaos surrounds you. Perhaps you tell yourself that you are being creative, but the truth is you are frightened of failure, so you don't cry. Your abilities remain untested and your dreams unfulfilled.",
+    B: "You represent balance and common sense. Your ability to manage your life is impressive, and you know when to relax. You understand that the best decisions are never made in an atmosphere of pressure. You can meet deadlines and look ahead to make sure crises don't happen.",
+    C: "You live in hope that something or somebody will make everything in life come right for you.\"I'll get round to it\", you tell yourself. What you don't tell yourself is that you alone can manage your life. You are an expert in putting things off till later and finding excuses when you do so. Forget these excuses. The right time is now.",
+    D: "You are certainly an achiever. Superman or superwoman. You know how to get a job done and you are proud of the way you manage your life. You are obsessive about using every second of the day to your best effect and get irritated by people who are not like you and prefer to take life at a slower pace. Learn to relax a little. Remember, stress kills.",
+ }
 
+// Wait for the DOM to finish loading before running the results
 document.addEventListener("DOMContentLoaded", function() {
     showResult();
 });
 
 // Display correct highest or equal result
 function showResult() {
+    // Check first hight option and second hight option
+    const firstHighestOption = localStorage.getItem("firstHighestOption");
+    const secondHighestOption = localStorage.getItem("secondHighestOption");
 
-    const highestOptionSelected = localStorage.getItem("highestOptionSelected") || undefined;
-    const isResultEqual = localStorage.getItem("isResultEqual") || undefined;
-console.log("hi result",highestOptionSelected)
-    if (highestOptionSelected === 'undefined' && isResultEqual) {
-        console.log("display aall 4")
-        document.getElementById("highResult").style.display = "none";
+    // Store div id
+    const firstOption = "result"+firstHighestOption.charAt(firstHighestOption.length - 1);  //set it to same id name resultA or resultB ... etc
+    const secondOption = "result"+secondHighestOption.charAt(secondHighestOption.length - 1); 
+
+    // Cheking conditions
+    if (localStorage.getItem("isAllOptionsEqual") === 'true'){
+        document.getElementById("resultA").style.display = "block";
+        document.getElementById("resultB").style.display = "block";
+        document.getElementById("resultC").style.display = "block";
+        document.getElementById("resultD").style.display = "block";
+        // Display all of them if is true
+        resultA.innerHTML = "<p class= 'option' id='A'>" + results.A + "</p>";
+        resultB.innerHTML = "<p class= 'option' id='B'>" + results.B + "</p>";
+        resultC.innerHTML = "<p class= 'option' id='C'>" + results.C + "</p>";
+        resultD.innerHTML = "<p class= 'option' id='D'>" + results.D + "</p>";
+    } else if (firstHighestOption && secondHighestOption) {
         
-        resultA.innerHTML = "<p class= 'option' id='A'>" + results[0].resultA + "</p>";
-        resultB.innerHTML = "<p class= 'option' id='B'>" + results[0].resultB + "</p>";
-        resultC.innerHTML = "<p class= 'option' id='C'>" + results[0].resultC + "</p>";
-        resultD.innerHTML = "<p class= 'option' id='D'>" + results[0].resultD + "</p>";
-    } else  {
-        document.getElementById("display").style.display = "none";
-        console.log("display aall 4 falseeeeee")
-        
-        if (highestOptionSelected === 'countOptionA' ) {
-            highResult.innerHTML = "<p class= 'option' id='A'>" + results[0].resultA + "</p>";
-        } else if (highestOptionSelected === 'countOptionB') {
-            highResult.innerHTML = "<p class= 'option' id='B'>" + results[0].resultB + "</p>";
-        } else if (highestOptionSelected === 'countOptionC') {
-            highResult.innerHTML = "<p class= 'option' id='C'>" + results[0].resultC + "</p>";
+        document.getElementById(firstOption).style.display = "block";
+        document.getElementById(secondOption).style.display = "block";
+
+        if (firstOption === "resultA") {
+            resultA.innerHTML = "<p class= 'option' id='A'>" + results.A + "</p>";
+        } else  if (firstOption === "resultB") {
+            resultB.innerHTML = "<p class= 'option' id='B'>" + results.B + "</p>";
+        } else  if (firstOption === "resultC") {
+            resultC.innerHTML = "<p class= 'option' id='C'>" + results.C + "</p>";
         } else {
-            highResult.innerHTML = "<p class= 'option' id='D'>" + results[0].resultD + "</p>";
+            resultD.innerHTML = "<p class= 'option' id='D'>" + results.D + "</p>";
         }
+
+        if (secondOption === "resultA") {
+            resultA.innerHTML = "<p class= 'option' id='A'>" + results.A + "</p>";
+        } else  if (secondOption === "resultB") {
+            resultB.innerHTML = "<p class= 'option' id='B'>" + results.B + "</p>";
+        } else  if (secondOption === "resultC") {
+            resultC.innerHTML = "<p class= 'option' id='C'>" + results.C + "</p>";
+        } else {
+            resultD.innerHTML = "<p class= 'option' id='D'>" + results.D + "</p>";
+        }
+
+    } else {
+
+        document.getElementById(firstOption).style.display = "block";
+        //only one result which has highest 
+        if (firstOption === "resultA") {
+            resultA.innerHTML = "<p class= 'option' id='A'>" + results.A + "</p>";
+        } else  if (firstOption === "resultB") {
+            resultB.innerHTML = "<p class= 'option' id='B'>" + results.B + "</p>";
+        } else  if (firstOption === "resultC") {
+            resultC.innerHTML = "<p class= 'option' id='C'>" + results.C + "</p>";
+        } else {
+            resultD.innerHTML = "<p class= 'option' id='D'>" + results.D + "</p>";
+        }
+
     }
 
 }
+
+// Light theme and Dark theme 
+let themeToggler = document.getElementById('theme-toggler');
+
+themeToggler.onclick = () => {
+    themeToggler.classList.toggle('fa-sun');
+
+    if(themeToggler.classList.contains('fa-sun')) {
+        document.body.classList.add('active');
+    } else {
+        document.body.classList.remove('active')
+    }
+};
+
+

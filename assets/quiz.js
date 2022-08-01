@@ -81,36 +81,51 @@ const quizQuestions = [
 
 
 
-// Declare Function
+// Wait for the DOM to finish loading before running the questions
 document.addEventListener("DOMContentLoaded", function() {
-    startQuiz();
+    getQuestions();
 });
 
 
-function startQuiz() {
-    getQuestions();
-}
-
-
 function getResult() {
-    if  (countOptionA === countOptionB && countOptionB === countOptionC && countOptionC === countOptionD) {
-        localStorage.setItem("highestOptionSelected", undefined);
-        localStorage.setItem("isResultEqual", true);
-        window.location="result.html";     
-    } else {
-        const answeredOptions = {countOptionA, countOptionB, countOptionC, countOptionD},
-        highest = Object.values(answeredOptions).sort().pop();
-        highestOption = Object.keys(answeredOptions).find( option => answeredOptions[option] === highest);
-        localStorage.setItem("highestOptionSelected", highestOption);
-        localStorage.setItem("isResultEqual", false);
-        window.location="result.html";
-    }
+    // Store the options have chosen in a object
+    const answeredOptions = { countOptionA, countOptionB, countOptionC, countOptionD };
+
+    const sortedAnswer = Object.fromEntries(
+        Object.entries(answeredOptions).sort(([,a],[,b]) => a-b)
+    );
     
+    // Sort the options from highest to low
+     const sortedAnswerArray = Object.keys(sortedAnswer).reverse();
+  
+     const firstHighestKey = sortedAnswerArray[0];
+     const secondHighestKey = sortedAnswerArray[1];
+
+     const firstHighestValue = sortedAnswer[firstHighestKey];
+     const secondHighestValue = sortedAnswer[secondHighestKey];
+
+    // Cheking the condition
+    if (sortedAnswer.countOptionA === sortedAnswer.countOptionB 
+        && sortedAnswer.countOptionB === sortedAnswer.countOptionC 
+        && sortedAnswer.countOptionC === sortedAnswer.countOptionD) {
+            localStorage.setItem("isAllOptionsEqual", true);   
+    } else if (firstHighestValue === secondHighestValue) {
+        localStorage.setItem("isAllOptionsEqual", false);  
+        localStorage.setItem("firstHighestOption", firstHighestKey);
+        localStorage.setItem("secondHighestOption", secondHighestKey);
+    } else {
+        localStorage.setItem("isAllOptionsEqual", false);  
+        localStorage.setItem("firstHighestOption", firstHighestKey);
+        
+    }
+    // redirect user to resut page
+    window.location="result.html";
+
 }
 
-
-
+// Get the question and options A,B,C,D
 function getQuestions() {
+    //runningQuestion start from zero to get the first question
     const questions = quizQuestions[runningQuestion]; 
     question.innerHTML = "<h1 id='questions'><strong>" + questions.question + "</strong></h1>"
     optionA.innerHTML = "<p class= 'option' id='A'>" + questions.optionA + "</p>";
@@ -119,9 +134,12 @@ function getQuestions() {
     optionD.innerHTML = "<p class= 'option' id='D'>" + questions.optionD + "</p>";
 }
 
-
+// When the user click on the option
 function checkAnswer(option) {
-    runningQuestion++;
+    runningQuestion++; // increment to get the next question
+    // calculate the percentage of progress
+    const progressPercentage = ((runningQuestion)/8)*100;
+    document.getElementById("progress-bar").setAttribute("style",`width:${progressPercentage}%`);
     if (option === 'A') {
         countOptionA++;
     } else if (option === 'B') {

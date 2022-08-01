@@ -119,6 +119,7 @@ to {
     border-radius: 0px 60px 0px;
     position: relative;
     width: 5rem;
+    cursor: pointer;
     border-color: var(--primary-border-color);
     margin-top: inherit;
 }
@@ -129,6 +130,7 @@ to {
     border-radius: 0px 60px 0px;
     position: relative;
     width: 5rem;
+    cursor: pointer;
     border-color: var(--primary-border-color);
     margin-top: inherit;
 }
@@ -197,7 +199,6 @@ footer {
     height: 100%;
     border-radius: 0px 60px 0px;
     background-color: var(--primary-bg-color);
-    width: 50%;
     transition: all 300ms;
 }
 
