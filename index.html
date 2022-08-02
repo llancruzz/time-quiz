@@ -28,9 +28,13 @@
      <h1><strong>How well do you use your time?</strong></h1>
       <p>Are you ready to start the quiz?</p>
       <div id="outerBtn">
-         <a href="quiz.html">
-          <button class="btn-start" id="start">Start Quiz</button>
-         </a>
+        <button class="btn-start" id="start">Start Quiz</button>
+     <script>
+         document.getElementById("start").onclick = function () {
+             location.href = "quiz.html";
+         };
+     </script>
+     
       </div>
    </section>
    <!--Footer-->
