@@ -289,3 +289,65 @@ section {
 #question-area {
     margin-top: 15px;
 }
+
+/* media screen for mobile phone 320px */
+@media only screen and (min-width: 320px) {
+    body, html {
+      overflow-x: hidden;
+    }
+
+
+    h1 {
+        font-size: inherit;
+    }
+
+
+    h2 {
+        font-size: initial;
+    }
+
+
+    .option-container p {
+        font-size: x-small;
+    }
+
+
+    .bar {
+        margin: 0.5rem;
+    }
+
+
+    #container {
+        margin-top: 0.5rem;  
+    }
+
+}
+
+
+/* media screen for mobile phone 768px */
+@media only screen and (min-width: 768px) {
+    body, html {
+      overflow-x: hidden;
+    }
+
+
+    h1 {
+        font-size: 2rem;
+    }
+
+
+    h1 p {
+        font-size: initial;
+    }
+
+
+    h2 {
+        font-size: initial;
+    }
+
+
+    .option-container p {
+        font-size: 1.3rem;
+    }
+
+}
