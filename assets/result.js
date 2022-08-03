@@ -29,8 +29,8 @@ function showResult() {
 
     // Store div id
     const firstOption = "result"+firstHighestOption.charAt(firstHighestOption.length - 1);  //set it to same id name resultA or resultB ... etc
-    const secondOption = "result"+secondHighestOption.charAt(secondHighestOption.length - 1); 
-
+    
+    
     // Cheking conditions
     if (localStorage.getItem("isAllOptionsEqual") === 'true'){
         document.getElementById("resultA").style.display = "block";
@@ -43,7 +43,8 @@ function showResult() {
         resultC.innerHTML = "<p class= 'option' id='C'>" + results.C + "</p>";
         resultD.innerHTML = "<p class= 'option' id='D'>" + results.D + "</p>";
     } else if (firstHighestOption && secondHighestOption) {
-         
+        const secondOption = "result"+secondHighestOption.charAt(secondHighestOption.length - 1); 
+
         document.getElementById(firstOption).style.display = "block";
         document.getElementById(secondOption).style.display = "block";
 
