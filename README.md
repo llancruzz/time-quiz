@@ -1,17 +1,17 @@
 # The Quiz Time !
-![Screenshot logo]()
+
 
 ## Introduction
-The Quiz Time is a site about a ...
+The Quiz Time Website is a site about personality quizzes. It is about testing how you spend your time. That is, how well you manage your time.
 
 ![Responsive Screenshot](./assets/images/responsive.png)
 
-[View the live Website on Github Pages](#) Please note: To open any links in this document in a new browser tab, please press CTRL + Click.
+[View the live Website on Github Pages](https://llancruzz.github.io/time-quiz/) Please note: To open any links in this document in a new browser tab, please press CTRL + Click.
 
 ## Table Of Contents:
 * [UX](#ux)
 
-  * [The Quiz Time](#the-hike-style) 
+  * [The Quiz Time](#the-quiz-time) 
   * [Colour Palette](#colour-palette)
   * [Wireframe mockups](#wireframe-mockups)
     
@@ -42,40 +42,41 @@ The Quiz Time is a site about a ...
   
 
 ## UX 
-### The Hike Style
-The Quiz Time is a site created for ...
+### The Quiz Time
+Quiz Time is a website created for those who want to test their personality according to what they do in everyday life. It is simple and seeks to understand how you spend your time on everyday activities.
 
 ### Colour Palette
-![color used in this project](#)
+![color used in this project](./assets/images/colours.png)
 
 ## Wireframe mockups
 Initially I utilised Balsamiq to produce low fidelity wireframes to organise the site structure, potential content placement locations.
 
-* [Home page Wireframe](#)
-* [Questions page Wireframe](#)
-* [Result page Wireframe](#)
+* [Mobile Wireframe](https://github.com/llancruzz/time-quiz/blob/main/assets/images/mobile.png)
+* [Desktop Wireframe](https://github.com/llancruzz/time-quiz/blob/main/assets/images/desktop.png)
 
 ## Features
 
 ### Common Features 
 #### Navigation Bar
 
-  * The navigation bar features a common design across ....
+  * The navigation bar features a simple design with only a moon symbol for the Dark Theme and a sun symbol for the Light Theme. Therefore, there are two options that the user can choose between them.
 
-![Navigation bar screenshot](#) 
+![Navigation bar Dark Theme screenshot](./assets/images/dark-nav.png) 
+
+![Navigation bar Light Theme screenshot](./assets/images/light-nav.png)
 
 #### Hero Image
 
-  * Only Home page includes a .... overlay which further indicates to the user exactly which section of the site they are on.
+  * Only the home page includes a circle that makes an apology that our lives are based on circles. The main page has two questions. The first one makes the user curious to know what he will know at the end of the quiz. The second asks if he is ready for the quizzes. Just below, there is a button to start the quiz.
 
-![Screenshot Hero Immage]()
+![Screenshot Hero Immage](./assets/images/home-page.png)
 
 #### Footer
   
   * The lower section of the common footer includes logo links to each of the social media platforms. This provides the user with a visual call to action to prompt them into visiting the social media profiles.
   * These links offer an unintrusive method of promoting the social media channels to the user, providing benefits to the organisation by the way of increased social media following.
 
-![Screenshot Footer]()
+![Screenshot Footer](.//assets/images/footer.png)
 
 
 ### Home Page Features
@@ -83,21 +84,21 @@ Initially I utilised Balsamiq to produce low fidelity wireframes to organise the
 
   * ......
 
-![Home page screenshot](photo)
+![Home page screenshot]()
 
 ### Quiz Page Features
 * Quiz
 
-  * .....
+  * .
 
-    ![Join Uss page screenshot](photo)
+  ![Quiz page screenshot](./assets/images/questions.png)
 
 ### Result Page Features
 * Result
 
   * .....
 
-    ![Thank You page screenshot](photo)
+  ![Result page screenshot](./assets/images/results.png)
 
 
 ### Feature Testing
