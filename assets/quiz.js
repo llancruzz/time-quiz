@@ -82,6 +82,7 @@ const quizQuestions = [
 
 // Wait for the DOM to finish loading before running the questions
 document.addEventListener("DOMContentLoaded", function() {
+    window.localStorage.clear();
     "use strict";
     getQuestions();
 });

@@ -27,6 +27,9 @@ The Quiz Time Website is a site about personality quizzes. It is about testing h
     * [Result Page](#result-page)
     * [Feature Testing](#feature-testing)
 
+
+* [Dark Theme and Light Theme](#dark-theme-and-light-theme)
+
 * [Technologies](#technologies)
  
 * [Testing](#testing)
@@ -35,6 +38,7 @@ The Quiz Time Website is a site about personality quizzes. It is about testing h
     
     * [HTML](#html)
     * [CSS](#css)
+    * [JavaScript](#javascript)
     * [Lighthouse](#lighthouse)
     * [WAVE Web Accessibility Evaluation Tool](#wave-web-accessibility-evaluation-tool)
 
@@ -84,29 +88,36 @@ Initially I utilised Balsamiq to produce low fidelity wireframes to organise the
 
 #### Quiz Page
 
-  * ....
+  * There are 8 questions and 4 options. The questions and options will be updated as the user answers the quiz.
 
   ![Quiz page screenshot](./assets/images/questions.png)
 
 #### Progress Bar
 
-  * ...
+  * The progress bar will be filled as the user answers the quiz.
 
   ![Progress bar screenshot](./assets/images/pregress-bar.png)
 
 #### Result Page 
 
-  * .....
+  * The result will be displayed according to the answers of the quiz. 
 
   ![Result page screenshot](./assets/images/results.png)
 
 
 ### Feature Testing
  * The process included are as follows:
-    * Home : ....
-    * Quiz : ....
-    * Result : ....
+    * Home: Includes a button to start the quiz, a circle spinning and two questions to involve the users to do the quiz.
+    * Quiz: Includes eight questions and four options. A progress bar will be filled according to the options selected by the user.
+    * Result: Incluedes the results about the personality's users. A button to return to the home page. 
+    * The clock symbol above the progress bar is for visual design only. 
 
+
+## Dark Theme and Light Theme
+
+ * The user has two options to chose betwen dark and light theme.
+
+ ![Screenshot of themes](./assets/images/themes.png)
 
 ## Technologies
 * Technologies / Tools Used

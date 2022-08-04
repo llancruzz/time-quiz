@@ -26,10 +26,6 @@ function showResult() {
     // Check first hight option and second hight option
     const firstHighestOption = localStorage.getItem("firstHighestOption");
     const secondHighestOption = localStorage.getItem("secondHighestOption");
-
-    // Store div id
-    const firstOption = "result"+firstHighestOption.charAt(firstHighestOption.length - 1);  //set it to same id name resultA or resultB ... etc
-     
     
     // Cheking conditions
     if (localStorage.getItem("isAllOptionsEqual") === 'true'){
@@ -43,6 +39,7 @@ function showResult() {
         resultC.innerHTML = "<p class= 'option' id='C'>" + results.C + "</p>";
         resultD.innerHTML = "<p class= 'option' id='D'>" + results.D + "</p>";
     } else if (firstHighestOption && secondHighestOption) {
+        const firstOption = "result"+firstHighestOption.charAt(firstHighestOption.length - 1);  //set it to same id name resultA or resultB ... etc
         const secondOption = "result"+secondHighestOption.charAt(secondHighestOption.length - 1);
     
         document.getElementById(firstOption).style.display = "block";
@@ -69,7 +66,7 @@ function showResult() {
         }
 
     } else {
-
+        const firstOption = "result"+firstHighestOption.charAt(firstHighestOption.length - 1);  //set it to same id name resultA or resultB ... etc
         document.getElementById(firstOption).style.display = "block";
         // Only one result which has highest 
         if (firstOption === "resultA") {
