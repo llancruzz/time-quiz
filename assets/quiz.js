@@ -117,7 +117,7 @@ function getResult() {
         localStorage.setItem("firstHighestOption", firstHighestKey);
         
     }
-    // redirect user to resut page
+    // Redirect user to result page
     window.location="result.html";
 
 }
@@ -152,7 +152,7 @@ function checkAnswer(option) {
     } 
     //Check if all question are finished
     if (runningQuestion <= 7) {
-    //continue to next question if is not finished
+    //Continue to next question if is not finished
         getQuestions();
     } else {
         getResult();

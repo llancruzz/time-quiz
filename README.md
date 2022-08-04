@@ -11,7 +11,7 @@ The Quiz Time Website is a site about personality quizzes. It is about testing h
 ## Table Of Contents:
 * [UX](#ux)
 
-  * [The Quiz Time](#the-quiz-time) 
+  * [Quiz Time](#quiz-time)
   * [Colour Palette](#colour-palette)
   * [Wireframe mockups](#wireframe-mockups)
     
@@ -20,7 +20,11 @@ The Quiz Time Website is a site about personality quizzes. It is about testing h
   * [Common Features](#common-features)
     
     * [Navigation Bar](#navigation-bar)
+    * [Hero Image](#hero-image)
     * [Footer](#footer)
+    * [Quiz Page](#quiz-page)
+    * [Progress Bar](#progress-bar)
+    * [Result Page](#result-page)
     * [Feature Testing](#feature-testing)
 
 * [Technologies](#technologies)
@@ -42,7 +46,7 @@ The Quiz Time Website is a site about personality quizzes. It is about testing h
   
 
 ## UX 
-### The Quiz Time
+### Quiz Time
 Quiz Time is a website created for those who want to test their personality according to what they do in everyday life. It is simple and seeks to understand how you spend your time on everyday activities.
 
 ### Colour Palette
@@ -78,23 +82,19 @@ Initially I utilised Balsamiq to produce low fidelity wireframes to organise the
 
 ![Screenshot Footer](.//assets/images/footer.png)
 
+#### Quiz Page
 
-### Home Page Features
-* Home
-
-  * ......
-
-![Home page screenshot]()
-
-### Quiz Page Features
-* Quiz
-
-  * .
+  * ....
 
   ![Quiz page screenshot](./assets/images/questions.png)
 
-### Result Page Features
-* Result
+#### Progress Bar
+
+  * ...
+
+  ![Progress bar screenshot](./assets/images/pregress-bar.png)
+
+#### Result Page 
 
   * .....
 
@@ -130,37 +130,49 @@ The website has been tested by friends in different browsers ( Chorme, Firefox, 
 
   * No errors were returned when passing through the official W3C Validator.
     
-    * [Home Page](#)
-    * [Quiz Page](#)
-    * [Result Page](#)
+    * [Home Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fllancruzz.github.io%2Ftime-quiz%2F)
+    * [Quiz Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fllancruzz.github.io%2Ftime-quiz%2Fquiz.html)
+    * [Result Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fllancruzz.github.io%2Ftime-quiz%2Fresult.html)
 
-![Screenshot WSC Validator](photo)
+![Screenshot WSC Validator](./assets/images/validator-html.png)
 
 #### CSS
 
   * No errors were returned when passing through the official (Jigsaw) Validator.
 
-    * [Link to results](#)
+   
 
-![Screen Shot Results CSS validator](photo)
+![Screenshot Results CSS validator](./assets/images/css-validator.png)
+
+#### JavaScript
+
+  * No erros were returned when passing through the official [JSHInt](https://jshint.com/)
+
+    * Test quiz.js file 
+
+    ![ Screenshot Test quiz.js file](./assets/images/result-test.png)
+
+    * Test result.js
+
+    ![Screenshot Test result.js file](./assets/images/result-test.png)
 
 #### Lighthouse
 
   * I generated a lighthouse report for the deployed site through the Google Chrome Dev Tools. I generated both a desktop and mobile report. The two reports, both for mobile and desktop, reported that the image sizes were too heavy to load. I redacted the images and turned them into Webp archive by the site [EZGIF.COM](https://ezgif.com/jpg-to-webp) and then I improved the performance score.
 
-    * Mobile 
-    ![Screenshot Mobile Score](#)
+    * Mobile  
+    ![Screenshot Mobile Score](./assets/images/lighthouse-mobile.png)
 
-    * Desktop
-    ![Screenshot Desktop Score](#)
+    * Desktop  
+    ![Screenshot Desktop Score](./assets/images/lighthouse-desktop.png))
   
 ### WAVE Web Accessibility Evaluation Tool
 
   * I have tested all the pages HOME - QUESTIONS - RESULTS for the following analyses: 
 
-  ![Wave Screenshot](./assets/media/wave-validation.png)
+  ![Wave Screenshot](./assets/images/wave-validation.png)
 
-  All the pages no errors were detected! [Link to results](#)
+  All the pages no errors were detected! [Link to results](https://wave.webaim.org/report#/https://llancruzz.github.io/time-quiz/)
 
 ## Deployment
 * The site was deployed to GitHub pages. The steps to deploy are as follows:
@@ -170,14 +182,14 @@ The website has been tested by friends in different browsers ( Chorme, Firefox, 
   * Under the GitHub Pages from the source section drop-down menu, select the master branch.
   * One the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
- The live link can be found here - [The Quiz Time Live Site](#)
+ The live link can be found here - [The Quiz Time Live Site](https://llancruzz.github.io/time-quiz/)
 
  ## Credits
  ### Content
-  * The text for all pages was created by myself.
+  * The logic for all quizzes was created by myself.
   * The reference material on HTML and CSS provided by [w3schools.com](https://www.w3schools.com/) was utilised to implement flexbox and as general reference material for other areas.
   * The logo for footer I used for this project were take from [Font Awesome](https://fontawesome.com/).
+  * The materials and ideas utilized in order to create Toogle Theme was found a couple of videos by [Youtube](https://www.youtube.com/).
 
  ### Media
-  * The images used for hero image on Home Page and Gallery Page were taken by Alan Cruz (myself) and a couple friends. All the images were authorized to be made available in this project by friends.
   * The Favicon, links and meta code were generated by [favicon.io](https://favicon.io/).
