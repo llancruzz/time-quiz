@@ -114,11 +114,11 @@ Initially I utilised Balsamiq to produce low fidelity wireframes to organise the
 ## Technologies
 * Technologies / Tools Used
 
-  * ![html5](./assets/images/html5.png)
-  * ![css3](./assets/images/css3.png)
-  * ![javascript](./assets/images/javascript.png)
+  * ![html5](./assets/images/html.png)
+  * ![css3](./assets/images/css.png)
+  * ![javascript](./assets/images/js.png)
   * ![balsamiq](./assets/images/balsamiq.png)
-  * ![adobecolor](./assets/images/adobecolor.png)
+  * ![adobecolor](./assets/images/adobe.png)
 
 
 ## Testing
@@ -133,7 +133,14 @@ The website has been tested by friends in different browsers ( Chorme, Firefox, 
     * The clock symbol above the progress bar is for visual design only. 
 
 ### Fixed Issues
-  * 
+  * The official WC3 HTML Validator website showed an error in the HTML file as screenshot below. To fix this error I had to create a script function inside the file. The function only aims to click on the 'Start Quiz' button' and take you to another page. The same problem with the 'Test Again' button. Problem solved successfully. Therefore, all HTML files got 100% Validator without errors.
+  
+    * Error in index.html file fixed.
+  ![Screenshot html index.html error](./assets/images/error-html.png)
+
+    * Error in result.html file fixed.
+  ![Screenshot html result.html error](./assets/images/error-resul-html.png)
+    
 
 ### Validator Testing
 #### HTML
@@ -160,11 +167,11 @@ The website has been tested by friends in different browsers ( Chorme, Firefox, 
 
     * Test quiz.js file 
 
-    ![ Screenshot Test quiz.js file](./assets/images/result-test.png)
+    ![ Screenshot Test quiz.js file](./assets/images/quiz-js.png)
 
     * Test result.js
 
-    ![Screenshot Test result.js file](./assets/images/result-test.png)
+    ![Screenshot Test result.js file](./assets/images/result-js.png)
 
 #### Lighthouse
 
