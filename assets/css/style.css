@@ -157,6 +157,12 @@ to {
 }
 
 
+.next-btn:hover p {
+    background-color:var(--primary-bg-color);
+    color: var(--primary-text-color);
+}
+
+
 #mainQuiz {
     display: flex;
     flex-direction: column;
@@ -299,6 +305,8 @@ section {
     padding-left: 5%;
     font-family: 'Nunito', sans-serif;
     letter-spacing: 1px;
+    border-radius: 0px 60px 0px;
+    width: 100%;
 }
 
 
