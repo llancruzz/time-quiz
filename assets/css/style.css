@@ -61,8 +61,8 @@ body {
 
 .circle {
     position: relative;
-    width: 45vh;
-    height: 45vh;
+    width: 40vh;
+    height: 40vh;
     background: linear-gradient(#33ccff,#ff0066);
     border-radius: 50%;
     animation: animate 0.5s linear infinite;
@@ -133,6 +133,7 @@ to {
 }
 
 
+/* Button style */
 .btn-start {
     border-style: solid;
     border-radius: 0px 60px 0px;
@@ -142,6 +143,11 @@ to {
     border-color: var(--primary-border-color);
     margin-top: inherit;
     font-size: 95%;
+}
+
+
+.btn-start:hover {
+    background-color: #5EF2F2;
 }
 
 
@@ -157,6 +163,12 @@ to {
 }
 
 
+.btn-back:hover {
+    background-color: #5EF2F2;
+}
+
+
+/* Next Button - Styled so it can be differentiated from the answer buttons */
 .next-btn:hover p {
     background-color:var(--primary-bg-color);
     color: var(--primary-text-color);
@@ -301,7 +313,7 @@ section {
     color: var(--secondary-text-color);
     font-weight: bolder;
     text-align: justify;
-    padding-right: 5%;
+    padding-right: 12%;
     padding-left: 5%;
     font-family: 'Nunito', sans-serif;
     letter-spacing: 1px;

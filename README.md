@@ -105,14 +105,6 @@ Initially I utilised Balsamiq to produce low fidelity wireframes to organise the
   ![Result page screenshot](./assets/images/results.png)
 
 
-### Feature Testing
- * The process included are as follows:
-    * Home: Includes a button to start the quiz, a circle spinning and two questions to involve the users to do the quiz.
-    * Quiz: Includes eight questions and four options. A progress bar will be filled according to the options selected by the user.
-    * Result: Incluedes the results about the personality's users. A button to return to the home page. 
-    * The clock symbol above the progress bar is for visual design only. 
-
-
 ## Dark Theme and Light Theme
 
  * The user has two options to chose betwen dark and light theme.
@@ -133,8 +125,15 @@ Initially I utilised Balsamiq to produce low fidelity wireframes to organise the
 
 The website has been tested by friends in different browsers ( Chorme, Firefox, Safari) and in different smarthphones, laptop and desktop. I have personally tested the site extensively with development tools to ensure that the site works responsively not only on mobile devices, but also on medium to large screens. This website is supports by resolutions Desktop(1600x992px and over), Laptop(1280x802px), Tablet(768x1024px), Mobile(320x480px).
 
+### Feature Testing
+ * The process included are as follows:
+    * Home: Includes a button to start the quiz, a circle spinning and two questions to involve the users to do the quiz.
+    * Quiz: Includes eight questions and four options. A progress bar will be filled according to the options selected by the user.
+    * Result: Incluedes the results about the personality's users. A button to return to the home page. 
+    * The clock symbol above the progress bar is for visual design only. 
+
 ### Fixed Issues
-  * ......
+  * 
 
 ### Validator Testing
 #### HTML

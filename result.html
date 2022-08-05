@@ -17,39 +17,25 @@
    <header>
     <div id="theme-toggler" class="fas fa-moon"></div>
    </header>
-
    <section>
     <!--Quiz-->
     <div id="resultHeader">
         <h1>Well, you are ...</h1>
     </div>
-
     <div id="containerResult">
-    
         <div class="option-container" id="resultA" style="display: none;"></div>
         <div class="option-container" id="resultB" style="display: none;"></div>
         <div class="option-container" id="resultC" style="display: none;"></div>
-        <div class="option-container" id="resultD" style="display: none;"></div>
-   
+        <div class="option-container" id="resultD" style="display: none;"></div> 
     </div>
-
    <div id="outerBtn">
-     <button class="btn-back" id="testAgain">Test Again</button>
-     <script>
-        document.getElementById("testAgain").onclick = function () {
-            location.href = "index.html";
-        }; // Function button which back to the home page
-    </script>
+     <button class="btn-back" id="testAgain">Test Again</button> 
    </div>
-
     </section>
-
     <div class="clock">
-
      <div id="favTime">
       <i class="far fa-clock"></i>
      </div>
-    
     </div>
    <!--Footer Social Media-->
    <footer class="social-media">
@@ -65,5 +51,12 @@
    <!-- font awsome script here -->
 <script src="https://kit.fontawesome.com/b11be1e679.js" crossorigin="anonymous"></script>  
 <script src="assets/result.js"></script> 
+<script src="assets/theme.js"></script>
+<!-- Function button which back to the home page -->
+<script>
+    document.getElementById("testAgain").onclick = function () {
+        location.href = "index.html";
+    }; 
+</script>
 </body>
 </html>

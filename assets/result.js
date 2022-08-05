@@ -1,3 +1,4 @@
+"use strict";
 //Get result elements
 const resultA = document.getElementById("resultA");
 const resultB = document.getElementById("resultB");
@@ -14,15 +15,9 @@ const results =
     D: "You are certainly an achiever. Superman or superwoman. You know how to get a job done and you are proud of the way you manage your life. You are obsessive about using every second of the day to your best effect and get irritated by people who are not like you and prefer to take life at a slower pace. Learn to relax a little. Remember, stress kills.",
    };
 
-// Wait for the DOM to finish loading before running the results
-document.addEventListener("DOMContentLoaded", function() {
-    "use strict";
-    showResult();
-});
 
-// Display correct highest or equal result
+/* Display correct highest or equal result */
 function showResult() {
-    "use strict";
     // Check first hight option and second hight option
     const firstHighestOption = localStorage.getItem("firstHighestOption");
     const secondHighestOption = localStorage.getItem("secondHighestOption");
@@ -83,17 +78,10 @@ function showResult() {
 
 }
 
-// Light theme and Dark theme 
-let themeToggler = document.getElementById('theme-toggler');
-    themeToggler.onclick = () => {
-    "use strict";
-    themeToggler.classList.toggle('fa-sun');
 
-    if(themeToggler.classList.contains('fa-sun')) {
-        document.body.classList.add('active');
-    } else {
-        document.body.classList.remove('active');
-    }
-};
+/* Wait for the DOM to finish loading before running the results */
+document.addEventListener("DOMContentLoaded", function() {
+    showResult();
+});
 
 

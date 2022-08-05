@@ -1,3 +1,4 @@
+"use strict";
 // Get quiz elements
 const optionA = document.getElementById("A");
 const optionB = document.getElementById("B");
@@ -79,17 +80,8 @@ const quizQuestions = [
 ];
 
 
-
-// Wait for the DOM to finish loading before running the questions
-document.addEventListener("DOMContentLoaded", function() {
-    window.localStorage.clear();
-    "use strict";
-    getQuestions();
-});
-
-
+/* Get the results of quizzes */
 function getResult() {
-    "use strict";
     // Store the options have chosen in a object
     const answeredOptions = { countOptionA, countOptionB, countOptionC, countOptionD };
 
@@ -123,9 +115,8 @@ function getResult() {
 
 }
 
-// Get the question and options A,B,C,D
+/* Get the question and options A,B,C,D */
 function getQuestions() {
-    "use strict";
     //runningQuestion start from zero to get the first question
     const questions = quizQuestions[runningQuestion]; 
     question.innerHTML = "<h1 id='questions'><strong>" + questions.question + "</strong></h1>";
@@ -135,9 +126,8 @@ function getQuestions() {
     optionD.innerHTML = "<p class= 'option' id='D'>" + questions.optionD + "</p>";
 }
 
-// When the user click on the option
+/* When the user click on the option */
 function checkAnswer(option) {
-    "use strict";
     runningQuestion++; // increment to get the next question
     // calculate the percentage of progress
     const progressPercentage = ((runningQuestion)/8)*100;
@@ -160,18 +150,12 @@ function checkAnswer(option) {
     } 
 }
 
-// Light theme and Dark theme 
-let themeToggler = document.getElementById('theme-toggler');
-    themeToggler.onclick = () => {
-    "use strict";
-    themeToggler.classList.toggle('fa-sun');
 
-    if(themeToggler.classList.contains('fa-sun')) {
-        document.body.classList.add('active');
-    } else {
-        document.body.classList.remove('active');
-    }
-};
+/* Wait for the DOM to finish loading before running the questions */
+document.addEventListener("DOMContentLoaded", function() {
+    window.localStorage.clear();
+    getQuestions();
+});
 
 
 
