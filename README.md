@@ -1,4 +1,4 @@
-# The Quiz Time !
+# The Quiz Time!
 
 
 ## Introduction
@@ -57,7 +57,7 @@ Quiz Time is a website created for those who want to test their personality acco
 ![color used in this project](./assets/images/colours.png)
 
 ## Wireframe mockups
-Initially I utilised Balsamiq to produce low fidelity wireframes to organise the site structure, potential content placement locations.
+Initially, I utilised Balsamiq to produce low-fidelity wireframes to organise the site structure and potential content placement locations.
 
 * [Mobile Wireframe](https://github.com/llancruzz/time-quiz/blob/main/assets/images/mobile.png)
 * [Desktop Wireframe](https://github.com/llancruzz/time-quiz/blob/main/assets/images/desktop.png)
@@ -100,14 +100,14 @@ Initially I utilised Balsamiq to produce low fidelity wireframes to organise the
 
 #### Result Page 
 
-  * The result will be displayed according to the answers of the quiz. 
+  * The result will be displayed according to the answers to the quiz. 
 
   ![Result page screenshot](./assets/images/results.png)
 
 
 ## Dark Theme and Light Theme
 
- * The user has two options to chose betwen dark and light theme.
+ * The user has two options to choose between dark and light themes.
 
  ![Screenshot of themes](./assets/images/themes.png)
 
@@ -123,17 +123,17 @@ Initially I utilised Balsamiq to produce low fidelity wireframes to organise the
 
 ## Testing
 
-The website has been tested by friends in different browsers ( Chorme, Firefox, Safari) and in different smarthphones, laptop and desktop. I have personally tested the site extensively with development tools to ensure that the site works responsively not only on mobile devices, but also on medium to large screens. This website is supports by resolutions Desktop(1600x992px and over), Laptop(1280x802px), Tablet(768x1024px), Mobile(320x480px).
+The website has been tested by friends in different browsers ( Chrome, Firefox, Safari) and on different smartphones, laptops and desktops. I have personally tested the site extensively with development tools to ensure that the site works responsively not only on mobile devices but also on medium to large screens. This website is supports by resolutions Desktop(1600x992px and over), Laptop(1280x802px), Tablet(768x1024px), Mobile(320x480px).
 
 ### Feature Testing
  * The process included are as follows:
     * Home: Includes a button to start the quiz, a circle spinning and two questions to involve the users to do the quiz.
     * Quiz: Includes eight questions and four options. A progress bar will be filled according to the options selected by the user.
-    * Result: Incluedes the results about the personality's users. A button to return to the home page. 
+    * Result: Includes the results about the personality's users. A button to, return to the home page. 
     * The clock symbol above the progress bar is for visual design only. 
 
 ### Fixed Issues
-  * The official WC3 HTML Validator website showed an error in the HTML file as screenshot below. To fix this error I had to create a script function inside the file. The function only aims to click on the 'Start Quiz' button' and take you to another page. The same problem with the 'Test Again' button. Problem solved successfully. Therefore, all HTML files got 100% Validator without errors.
+  * The official WC3 HTML Validator website showed an error in the HTML file as screenshot below. To fix this error I had to create a script function inside the file. The function only aims to click on the 'Start Quiz' button' and take you to another page. The same problem is with the 'Test Again' button. Problem solved successfully. Therefore, all HTML files got 100% Validator without errors.
   
     * Error in index.html file fixed.
   ![Screenshot html index.html error](./assets/images/error-html.png)
@@ -163,7 +163,7 @@ The website has been tested by friends in different browsers ( Chorme, Firefox, 
 
 #### JavaScript
 
-  * No erros were returned when passing through the official [JSHInt](https://jshint.com/)
+  * No errors were returned when passing through the official [JSHInt](https://jshint.com/)
 
     * Test quiz.js file 
 
@@ -189,15 +189,15 @@ The website has been tested by friends in different browsers ( Chorme, Firefox, 
 
   ![Wave Screenshot](./assets/images/wave-validation.png)
 
-  All the pages no errors were detected! [Link to results](https://wave.webaim.org/report#/https://llancruzz.github.io/time-quiz/)
+  On all the pages no errors were detected! [Link to results](https://wave.webaim.org/report#/https://llancruzz.github.io/time-quiz/)
 
 ## Deployment
 * The site was deployed to GitHub pages. The steps to deploy are as follows:
 
   * In the GitHub repository, navigate to the settings tab.
-  * Select the pages link from the setting menu on the left hand side.
+  * Select the pages to link from the setting menu on the left-hand side.
   * Under the GitHub Pages from the source section drop-down menu, select the master branch.
-  * One the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+  * Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
  The live link can be found here - [The Quiz Time Live Site](https://llancruzz.github.io/time-quiz/)
 
@@ -205,8 +205,8 @@ The website has been tested by friends in different browsers ( Chorme, Firefox, 
  ### Content
   * The logic for all quizzes was created by myself.
   * The reference material on HTML and CSS provided by [w3schools.com](https://www.w3schools.com/) was utilised to implement flexbox and as general reference material for other areas.
-  * The logo for footer I used for this project were take from [Font Awesome](https://fontawesome.com/).
-  * The materials and ideas utilized in order to create Toogle Theme was found a couple of videos by [Youtube](https://www.youtube.com/).
+  * The logo for the footer I used for this project was taken from [Font Awesome](https://fontawesome.com/).
+  * The materials and ideas utilized to create the Toogle Theme were found in a couple of videos by [Youtube](https://www.youtube.com/).
 
  ### Media
   * The Favicon, links and meta code were generated by [favicon.io](https://favicon.io/).

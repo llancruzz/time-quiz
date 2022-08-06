@@ -1,56 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A personality quiz">
-    <meta name="keywords" content="personality, quiz, time">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A personality quiz" />
+    <meta name="keywords" content="personality, quiz, time" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Quiz Time!</title>
-     <!-- Favicon link -->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-  <!--Light theme and Dark theme-->
-   <header>
-    <div id="theme-toggler" class="fas fa-moon"></div>
-   </header>
-   <div class="outer-quiz">
-    <!--Quiz-->
-    <div id="question"></div>
-    <div id="container">
-      <div class="option-container next-btn" id="A" onclick="checkAnswer('A')"></div>
-      <div class="option-container next-btn" id="B" onclick="checkAnswer('B')"></div>
-      <div class="option-container next-btn" id="C" onclick="checkAnswer('C')"></div>
-      <div class="option-container next-btn" id="D" onclick="checkAnswer('D')"></div>
-   </div>
-  </div>
+    <!-- Favicon link -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  </head>
+
+  <body>
+    <!--Light theme and Dark theme-->
+    <header>
+      <div id="theme-toggler" class="fas fa-moon"></div>
+    </header>
+    <div class="outer-quiz">
+      <!--Quiz-->
+      <div id="question"></div>
+      <div id="container">
+        <div class="option-container next-btn" id="A" onclick="checkAnswer('A')"></div>
+        <div class="option-container next-btn" id="B" onclick="checkAnswer('B')"></div>
+        <div class="option-container next-btn" id="C" onclick="checkAnswer('C')"></div>
+        <div class="option-container next-btn" id="D" onclick="checkAnswer('D')"></div>
+      </div>
+    </div>
     <section>
-     <h2>Choose only one option</h2>
+      <h2>Choose only one option</h2>
       <div id="favTime">
         <i class="far fa-clock"></i>
       </div>
-    <!--Progress Bar-->
-      <div class="bar" id ="barProgress">
+      <!--Progress Bar-->
+      <div class="bar" id="barProgress">
         <div id="progress-bar"></div>
       </div>
-   </section>
-   <!--Footer Social Media-->
-   <footer class="social-media">
-     <ul>
+    </section>
+    <!--Footer Social Media-->
+    <footer class="social-media">
+      <ul>
         <li>
-            <a href="https://github.com/llancruzz" target="_blank" rel="nooper" aria-label="Visit my Github ( opens in a new tab)"><i class="fa-brands fa-github-square"></i></a>
+          <a href="https://github.com/llancruzz" target="_blank" rel="nooper" aria-label="Visit my Github ( opens in a new tab)">
+            <i class="fa-brands fa-github-square"></i>
+          </a>
         </li>
         <li>
-         <a href="https://www.linkedin.com/in/alan-cruz-250890114/" target="_blank" rel="nooper" aria-label="Visit my Linkedin ( opens in a new tab)"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/alan-cruz-250890114/" target="_blank" rel="nooper" aria-label="Visit my Linkedin ( opens in a new tab)">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
         </li>
-     </ul>
-   </footer>
-   <!-- font awsome script here -->
-<script src="https://kit.fontawesome.com/b11be1e679.js" crossorigin="anonymous"></script> 
-<script src="assets/quiz.js"></script>
-<script src="assets/theme.js"></script>
-</body>
+      </ul>
+    </footer>
+    <!-- font awsome script here -->
+    <script src="https://kit.fontawesome.com/b11be1e679.js" crossorigin="anonymous"></script>
+    <script src="assets/quiz.js"></script>
+    <script src="assets/theme.js"></script>
+  </body>
 </html>

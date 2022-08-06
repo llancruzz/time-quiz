@@ -1,62 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A personality quiz">
-    <meta name="keywords" content="personality, quiz, time">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A personality quiz" />
+    <meta name="keywords" content="personality, quiz, time" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Quiz Time!</title>
-     <!-- Favicon link -->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-  <!--Light theme and Dark theme-->
-   <header>
-    <div id="theme-toggler" class="fas fa-moon"></div>
-   </header>
-   <section>
-    <!--Quiz-->
-    <div id="resultHeader">
+    <!-- Favicon link -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!--Light theme and Dark theme-->
+    <header>
+      <div id="theme-toggler" class="fas fa-moon"></div>
+    </header>
+    <section>
+      <!--Quiz-->
+      <div id="resultHeader">
         <h1>Well, you are ...</h1>
-    </div>
-    <div id="containerResult">
-        <div class="option-container" id="resultA" style="display: none;"></div>
-        <div class="option-container" id="resultB" style="display: none;"></div>
-        <div class="option-container" id="resultC" style="display: none;"></div>
-        <div class="option-container" id="resultD" style="display: none;"></div> 
-    </div>
-   <div id="outerBtn">
-     <button class="btn-back" id="testAgain">Test Again</button> 
-   </div>
+      </div>
+      <div id="containerResult">
+        <div class="option-container" id="resultA" style="display: none"></div>
+        <div class="option-container" id="resultB" style="display: none"></div>
+        <div class="option-container" id="resultC" style="display: none"></div>
+        <div class="option-container" id="resultD" style="display: none"></div>
+      </div>
+      <div id="outerBtn">
+        <button class="btn-back" id="testAgain">Test Again</button>
+      </div>
     </section>
     <div class="clock">
-     <div id="favTime">
-      <i class="far fa-clock"></i>
-     </div>
+      <div id="favTime">
+        <i class="far fa-clock"></i>
+      </div>
     </div>
-   <!--Footer Social Media-->
-   <footer class="social-media">
-     <ul>
+    <!--Footer Social Media-->
+    <footer class="social-media">
+      <ul>
         <li>
-            <a href="https://github.com/llancruzz" target="_blank" rel="nooper" aria-label="Visit my Github ( opens in a new tab)"><i class="fa-brands fa-github-square"></i></a>
+          <a href="https://github.com/llancruzz" target="_blank" rel="nooper" aria-label="Visit my Github ( opens in a new tab)">
+            <i class="fa-brands fa-github-square"></i>
+        </a>
         </li>
         <li>
-         <a href="https://www.linkedin.com/in/alan-cruz-250890114/" target="_blank" rel="nooper" aria-label="Visit my Linkedin ( opens in a new tab)"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/alan-cruz-250890114/" target="_blank" rel="nooper" aria-label="Visit my Linkedin ( opens in a new tab)">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
         </li>
-     </ul>
-   </footer>
-   <!-- font awsome script here -->
-<script src="https://kit.fontawesome.com/b11be1e679.js" crossorigin="anonymous"></script>  
-<script src="assets/result.js"></script> 
-<script src="assets/theme.js"></script>
-<!-- Function button which back to the home page -->
-<script>
-    document.getElementById("testAgain").onclick = function () {
+      </ul>
+    </footer>
+    <!-- font awsome script here -->
+    <script src="https://kit.fontawesome.com/b11be1e679.js" crossorigin="anonymous"></script>
+    <script src="assets/result.js"></script>
+    <script src="assets/theme.js"></script>
+    <!-- Function button which back to the home page -->
+    <script>
+      document.getElementById("testAgain").onclick = function () {
         location.href = "index.html";
-    }; 
-</script>
-</body>
+      };
+    </script>
+  </body>
 </html>

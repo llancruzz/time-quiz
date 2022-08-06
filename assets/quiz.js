@@ -20,8 +20,7 @@ let runningQuestion = 0;
 
 
 // Questions and answers
-const quizQuestions = [
-    {
+const quizQuestions = [{
         question: "How would you describe your pace of life?",
         optionA: "A - I'm easy-going. I just take life as it comes.",
         optionB: "B - Quite fast, but I leave enough time for relaxation.",
@@ -83,42 +82,47 @@ const quizQuestions = [
 /* Get the results of quizzes */
 function getResult() {
     // Store the options have chosen in a object
-    const answeredOptions = { countOptionA, countOptionB, countOptionC, countOptionD };
+    const answeredOptions = {
+        countOptionA,
+        countOptionB,
+        countOptionC,
+        countOptionD
+    };
 
     const sortedAnswer = Object.fromEntries(
-        Object.entries(answeredOptions).sort(([,a],[,b]) => a-b)
+        Object.entries(answeredOptions).sort(([, a], [, b]) => a - b)
     );
-    
-    // Sort the options from highest to low
-     const sortedAnswerArray = Object.keys(sortedAnswer).reverse();
-  
-     const firstHighestKey = sortedAnswerArray[0];
-     const secondHighestKey = sortedAnswerArray[1];
 
-     const firstHighestValue = sortedAnswer[firstHighestKey];
-     const secondHighestValue = sortedAnswer[secondHighestKey];
+    // Sort the options from highest to low
+    const sortedAnswerArray = Object.keys(sortedAnswer).reverse();
+
+    const firstHighestKey = sortedAnswerArray[0];
+    const secondHighestKey = sortedAnswerArray[1];
+
+    const firstHighestValue = sortedAnswer[firstHighestKey];
+    const secondHighestValue = sortedAnswer[secondHighestKey];
 
     // Cheking the condition
     if (sortedAnswer.countOptionA === sortedAnswer.countOptionB && sortedAnswer.countOptionB === sortedAnswer.countOptionC && sortedAnswer.countOptionC === sortedAnswer.countOptionD) {
-            localStorage.setItem("isAllOptionsEqual", true);   
+        localStorage.setItem("isAllOptionsEqual", true);
     } else if (firstHighestValue === secondHighestValue) {
-        localStorage.setItem("isAllOptionsEqual", false);  
+        localStorage.setItem("isAllOptionsEqual", false);
         localStorage.setItem("firstHighestOption", firstHighestKey);
         localStorage.setItem("secondHighestOption", secondHighestKey);
     } else {
-        localStorage.setItem("isAllOptionsEqual", false);  
+        localStorage.setItem("isAllOptionsEqual", false);
         localStorage.setItem("firstHighestOption", firstHighestKey);
-        
+
     }
     // Redirect user to result page
-    window.location="result.html";
+    window.location = "result.html";
 
 }
 
 /* Get the question and options A,B,C,D */
 function getQuestions() {
     //runningQuestion start from zero to get the first question
-    const questions = quizQuestions[runningQuestion]; 
+    const questions = quizQuestions[runningQuestion];
     question.innerHTML = "<h1 id='questions'><strong>" + questions.question + "</strong></h1>";
     optionA.innerHTML = "<p class= 'option' id='A'>" + questions.optionA + "</p>";
     optionB.innerHTML = "<p class= 'option' id='B'>" + questions.optionB + "</p>";
@@ -130,8 +134,8 @@ function getQuestions() {
 function checkAnswer(option) {
     runningQuestion++; // increment to get the next question
     // calculate the percentage of progress
-    const progressPercentage = ((runningQuestion)/8)*100;
-    document.getElementById("progress-bar").setAttribute("style",`width:${progressPercentage}%`);
+    const progressPercentage = ((runningQuestion) / 8) * 100;
+    document.getElementById("progress-bar").setAttribute("style", `width:${progressPercentage}%`);
     if (option === 'A') {
         countOptionA++;
     } else if (option === 'B') {
@@ -140,22 +144,19 @@ function checkAnswer(option) {
         countOptionC++;
     } else {
         countOptionD++;
-    } 
+    }
     //Check if all question are finished
     if (runningQuestion <= 7) {
-    //Continue to next question if is not finished
+        //Continue to next question if is not finished
         getQuestions();
     } else {
         getResult();
-    } 
+    }
 }
 
 
 /* Wait for the DOM to finish loading before running the questions */
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     window.localStorage.clear();
     getQuestions();
 });
-
-
-
